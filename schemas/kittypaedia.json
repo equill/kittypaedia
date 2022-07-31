@@ -1,0 +1,63 @@
+{
+  "name": "kittypaedia",
+    "resourcetypes": [
+      {
+        "name": "Vignettes",
+        "dependent": false,
+        "description": "Short,self-contained scenes.",
+        "attributes": [
+          {
+            "name": "text",
+            "description": "The text of the scene",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "name": "Ideas",
+        "dependent": false,
+        "notes": "An idea to develop.",
+        "attributes": [
+          {
+            "name": "description",
+            "description": "Detailed description of the idea.",
+            "type": "text"
+          }
+        ]
+      },
+    ],
+    "relationships": [
+      {
+        "source-type": "any",
+        "name": "SUBJECT_OF",
+        "target-type": "Ideas",
+        "cardinality": "many:many",
+        "reltype": "any",
+        "notes": "This thing is the subject of that idea."
+      },
+      {
+        "source-type": "Ideas",
+        "name": "REFERS_TO",
+        "target-type": "any",
+        "cardinality": "many:many",
+        "reltype": "any",
+        "notes": "This idea relates to that thing."
+      },
+      {
+        "source-type": "People",
+        "name": "SUBJECT_OF",
+        "target-type": "Vignettes",
+        "reltype": "any",
+        "cardinality": "many:many",
+        "notes": "This person is a subject of that vignette."
+      },
+      {
+        "source-type": "vignettes",
+        "name": "HAS_SUBNET",
+        "target-type": "People",
+        "reltype": "any",
+        "cardinality": "many:many",
+        "notes": "That person is a subject of this vignette."
+      }
+    ]
+}
