@@ -70,7 +70,7 @@ services:
       # Uncomment the following line to enable debug-logging
       #DEBUG: "true"
   webcatgui:
-    image: equill/webcatgui:0.0.15b3
+    image: equill/webcatgui:0.0.15b4
     deploy:
       replicas: 1
     ports:
