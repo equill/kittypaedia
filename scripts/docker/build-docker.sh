@@ -1,4 +1,4 @@
-VERSION='0.0.2'
+VERSION='0.0.3'
 cp ../../schemas/kittypaedia.json ./
-docker build . -t equill/kittypaedia:$VERSION -t equill/kittypaedia:latest
+docker build . -t equill/kittypaedia:$VERSION
 rm kittypaedia.json

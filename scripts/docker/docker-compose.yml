@@ -30,7 +30,7 @@ services:
       # Prevent issues with stone-age assumptions about character-sets.
       NEO4J_dbms_jvm_additional: "-Dfile.encoding=UTF-16"
   restagraph:
-    image: equill/kittypaedia:0.0.2
+    image: equill/kittypaedia:0.0.3
     depends_on:
       - neo4j # Tell Docker not to start RG until _after_ the db is already running
     deploy:
