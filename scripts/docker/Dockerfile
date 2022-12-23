@@ -1,2 +1,2 @@
-FROM equill/restagraph:0.9.2
+FROM equill/restagraph:0.9.3
 COPY kittypaedia.json /schemas/kittypaedia.json
